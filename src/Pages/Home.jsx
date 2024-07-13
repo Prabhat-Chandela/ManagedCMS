@@ -1,10 +1,10 @@
 import React from 'react';
-import { Loader } from '../Components/index';
+import {HeroCarousel} from '../Components/index';
 
 function Home() {
   return (
     <div className='w-full'>
-      Home
+      <HeroCarousel/>
     </div>
   )
 }
