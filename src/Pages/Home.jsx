@@ -1,11 +1,14 @@
 import React from 'react';
-import {HeroCarousel} from '../Components/index';
+import { HeroSection } from '../Components/index';
+import { BicepsFlexed } from 'lucide-react';
 
 function Home() {
   return (
-    <div className='w-full'>
-      <HeroCarousel/>
-    </div>
+    <main className='w-full mt-[90px]'>
+
+      <HeroSection />
+
+    </main>
   )
 }
 
