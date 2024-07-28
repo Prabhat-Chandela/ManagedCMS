@@ -1,12 +1,13 @@
 import React from 'react';
-import { HeroSection } from '../Components/index';
-import { BicepsFlexed } from 'lucide-react';
+import { HeroSection, HeroBanner,HeroAbout } from '../Components/index';
 
 function Home() {
   return (
     <main className='w-full mt-[90px]'>
 
       <HeroSection />
+      <HeroBanner />
+      <HeroAbout/>
 
     </main>
   )

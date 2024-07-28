@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { MessagesSquare, Component, Shrink, SendHorizontal } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import { motion as m } from 'framer-motion';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,8 +35,8 @@ function Header() {
 
 
   return (
-    <div className='w-full px-2 lg:p-3 fixed'>
-      <nav className='w-full h-[60px] border-b border-b-white px-1 lg:border lg:border-white lg:rounded-lg lg:px-3 flex items-center justify-between'>
+    <div className='w-full px-2 lg:p-3 fixed z-50'>
+      <nav className='w-full h-[60px] px-1 lg:px-3 flex items-center justify-between'>
         <div className=''>LOGO</div>
 
         <div className='flex items-center'>
@@ -50,7 +51,7 @@ function Header() {
               navitems.map((item) => (
                 <li key={item.name} className='w-full lg:flex lg:items-center justify-center gap-5'>
                   <span className='hidden lg:block w-[2px] h-[2px] p-[2px] bg-black rounded-full' />
-                  <NavLink to={item.path} className={({ isActive }) => `w-full flex items-center justify-between border p-3 rounded-xl border-black lg:border-none lg:justify-normal lg:p-0 lg:rounded-none ${isActive ? 'bg-black text-[#fff] lg:bg-transparent lg:text-black' : 'bg-transparent text-black lg:text-black/70'} `}>
+                  <NavLink to={item.path} className={({ isActive }) => `w-full flex items-center justify-between border p-3 rounded-xl border-black lg:border-none lg:justify-normal lg:p-0 lg:rounded-none transition-all ease-in-out duration-200 ${isActive ? 'bg-black text-[#fff] lg:bg-transparent lg:text-black' : 'bg-transparent text-black lg:text-black/70 '} `}>
                     {item.name} <span className='lg:hidden'><SendHorizontal /></span>
                   </NavLink>
                 </li>
